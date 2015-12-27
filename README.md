@@ -50,21 +50,4 @@ ps：xhprof Data需要全字段保存到MySQL中，可以通过xhprof自带的�
 
 
 
-CREATE DATABASE IF NOT EXISTS `xhprofui` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `xhprofui`;
-DROP TABLE IF EXISTS `xhprofui_detail`;
-CREATE TABLE IF NOT EXISTS `xhprofui_detail` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `url` varchar(2048) NOT NULL,
-  `host` varchar(256) NOT NULL,
-  `uri` varchar(256) NOT NULL,
-  `xhprof_id` varchar(128) NOT NULL,
-  `xhprof_data` longtext,
-  `xhprof_time` varchar(32) NOT NULL,
-  `ct` int(11) NOT NULL,
-  `wt` int(11) NOT NULL,
-  `mu` int(11) NOT NULL,
-  `pmu` int(11) NOT NULL,
-  `cpu` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3867 ;
+
